@@ -1,10 +1,5 @@
+import SEO from "../../components/SEO";
 import "./GrantDirectory.css";
-
-<SEO
-  title="Our History | MS & MC Memorial Foundation"
-  description="Learn about the history and legacy of the Mendi Stephen and Margaret Chuo Memorial Foundation."
-/>
-
 
 export default function GrantDirectory() {
   const grants = [
@@ -30,6 +25,11 @@ export default function GrantDirectory() {
 
   return (
     <section className="page">
+      <SEO
+        title="Grant Directory | MS & MC Memorial Foundation"
+        description="Browse current and past grant opportunities supported by the Mendi Stephen and Margaret Chuo Memorial Foundation."
+      />
+
       <section className="grant-directory">
         <div className="grant-directory-header">
           <h1>Grant Directory</h1>
@@ -76,8 +76,12 @@ export default function GrantDirectory() {
           {grants.map((grant, index) => (
             <div key={index} className="grant-card">
               <h3>{grant.name}</h3>
-              <p><strong>Category:</strong> {grant.category}</p>
-              <p><strong>Year:</strong> {grant.year}</p>
+              <p>
+                <strong>Category:</strong> {grant.category}
+              </p>
+              <p>
+                <strong>Year:</strong> {grant.year}
+              </p>
               <p className="grant-status">
                 <strong>Status:</strong> {grant.status}
               </p>

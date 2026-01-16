@@ -25,6 +25,10 @@ export default function Home() {
 
   return (
     <section className="page">
+      <SEO
+        title="Home | Mendi Stephen & Margaret Chuo Memorial Foundation"
+        description="Honoring a legacy of service through education support, community development, and meaningful impact."
+      />
       {/* HERO */}
       <section className="home-hero">
         <h1>Mendi Stephen and Margaret Chuo Memorial Foundation</h1>
@@ -33,6 +37,7 @@ export default function Home() {
           thoughtful giving and community-focused impact.
         </p>
       </section>
+
 
                   {/* ABOUT FOUNDATION */}
       <section className="home-about">

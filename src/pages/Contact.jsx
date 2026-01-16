@@ -1,14 +1,14 @@
 import "./Contact.css";
-
-<SEO
-  title="Our History | MS & MC Memorial Foundation"
-  description="Learn about the history and legacy of the Mendi Stephen and Margaret Chuo Memorial Foundation."
-/>
-
+import SEO from "../../components/SEO";
 
 export default function Contact() {
   return (
     <section className="page">
+      <SEO
+        title="Contact Us | MS & MC Memorial Foundation"
+        description="Get in touch with the Mendi Stephen and Margaret Chuo Memorial Foundation for inquiries, grant-related questions, and general communication."
+      />
+
       <section className="contact">
         <div className="contact-header">
           <h1>Contact Us</h1>

@@ -1,14 +1,14 @@
+import SEO from "../../components/SEO";
 import "./History.css";
-
-<SEO
-  title="Our History | MS & MC Memorial Foundation"
-  description="Learn about the history and legacy of the Mendi Stephen and Margaret Chuo Memorial Foundation."
-/>
-
 
 export default function History() {
   return (
     <section className="page">
+      <SEO
+        title="Our History | MS & MC Memorial Foundation"
+        description="Learn about the history and legacy of the Mendi Stephen and Margaret Chuo Memorial Foundation."
+      />
+
       <section className="history">
         {/* HEADER */}
         <div className="history-header">
@@ -54,48 +54,45 @@ export default function History() {
 
           {/* FAMILY IMAGE GRID */}
           <div className="history-family-grid">
-            {/* Repeat this block for each person */}
             <div className="family-card">
-              <img src="/images/family-1.jpg" alt="Family member" />
+              <img src="/images/family-1.jpg" alt="Mme. Mendi Alice" />
               <p className="family-name">Mme. Mendi Alice</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-2.jpg" alt="Family member" />
+              <img src="/images/family-2.jpg" alt="Mme. Mendi Florence" />
               <p className="family-name">Mme. Mendi Florence</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-3.jpg" alt="Family member" />
+              <img src="/images/family-3.jpg" alt="Mr. Mendi Kenneth" />
               <p className="family-name">Mr. Mendi Kenneth</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-4.jpg" alt="Family member" />
+              <img src="/images/family-4.jpg" alt="Mme. Mendi Prisca" />
               <p className="family-name">Mme. Mendi Prisca</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-5.jpg" alt="Family member" />
+              <img src="/images/family-5.jpg" alt="Mr. Mendi Valery" />
               <p className="family-name">Mr. Mendi Valery</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-6.jpg" alt="Family member" />
+              <img src="/images/family-6.jpg" alt="Mr. Mendi Roland" />
               <p className="family-name">Mr. Mendi Roland</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-7.jpg" alt="Family member" />
+              <img src="/images/family-7.jpg" alt="Mme. Mendi Violet" />
               <p className="family-name">Mme. Mendi Violet</p>
             </div>
 
             <div className="family-card">
-              <img src="/images/family-8.jpg" alt="Family member" />
+              <img src="/images/family-8.jpg" alt="Mr. Mendi Adolf" />
               <p className="family-name">Mr. Mendi Adolf</p>
             </div>
-
-            {/* Continue up to family-10 */}
           </div>
         </div>
       </section>

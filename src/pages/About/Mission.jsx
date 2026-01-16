@@ -1,14 +1,14 @@
+import SEO from "../../components/SEO";
 import "./Mission.css";
-
-<SEO
-  title="Our History | MS & MC Memorial Foundation"
-  description="Learn about the history and legacy of the Mendi Stephen and Margaret Chuo Memorial Foundation."
-/>
-
 
 export default function Mission() {
   return (
     <section className="page">
+      <SEO
+        title="Our Mission | MS & MC Memorial Foundation"
+        description="Learn about the mission and core commitments of the Mendi Stephen and Margaret Chuo Memorial Foundation."
+      />
+
       <section className="mission">
         <div className="mission-header">
           <h1>Our Mission</h1>
