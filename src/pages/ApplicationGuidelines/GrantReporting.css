@@ -1,0 +1,27 @@
+.grant-reporting {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.grant-reporting-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.grant-reporting-header h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.grant-reporting-content {
+  line-height: 1.9;
+  color: #333;
+}
+
+.grant-reporting-highlight {
+  background: #f8f9fb;
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}

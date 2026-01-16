@@ -1,0 +1,51 @@
+.guidelines-section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.guidelines-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.guidelines-header h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.guidelines-header p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  color: #444;
+}
+
+.guidelines-content {
+  line-height: 1.9;
+}
+
+.guidelines-step {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.step-number {
+  min-width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.guidelines-highlight {
+  background: #f8f9fb;
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}

@@ -1,0 +1,27 @@
+.decision-process {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.decision-process-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.decision-process-header h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.decision-process-content {
+  line-height: 1.9;
+  color: #333;
+}
+
+.decision-process-highlight {
+  background: #f8f9fb;
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}

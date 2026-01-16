@@ -1,0 +1,188 @@
+/* ================= NAVBAR ================= */
+.nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ================= LOGO ================= */
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f1f3f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo h2 {
+  color: var(--primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+
+/* ================= LINKS ================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-links span {
+  color: #0a2540;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.3rem 0;
+}
+
+/* Subtle hover (no loud effects) */
+.nav-links a:hover,
+.nav-links span:hover {
+  color: var(--accent);
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown-menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background: #ffffff;
+  min-width: 230px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  display: none;
+}
+
+.dropdown-menu li {
+  padding: 0.75rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: #0a2540;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #f8f9fb;
+}
+
+/* SHOW DROPDOWN ON HOVER (DESKTOP) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: #0a2540;
+  margin: 4px 0;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 2rem;
+    display: none;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile dropdowns are always visible */
+  .dropdown-menu {
+    position: static;
+    display: block;
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+}
+
+/* LOGO TEXT VARIANTS */
+.logo-full {
+  display: block;
+}
+
+.logo-short {
+  display: none;
+}
+
+/* ACTIVE LINK (VERY SUBTLE) */
+.active-link {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem;
+}
+
+/* LOGO HOVER (QUIET) */
+.logo:hover {
+  opacity: 0.95;
+}
+
+/* MOBILE LOGO BEHAVIOR */
+@media (max-width: 900px) {
+  .logo-full {
+    display: none;
+  }
+
+  .logo-short {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+}
