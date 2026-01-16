@@ -1,18 +1,15 @@
-/* ================= NAVBAR ================= */
 .nav {
-  background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 1rem 2.5rem;
+  background: var(--primary);
+  padding: 1rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* ================= LOGO ================= */
-/* ================= LOGO ================= */
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -23,12 +20,9 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #f1f3f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: white;
+  padding: 4px;
   overflow: hidden;
-  border: 1px solid #e0e0e0;
 }
 
 .logo-mark img {
@@ -38,18 +32,15 @@
 }
 
 .logo h2 {
-  color: var(--primary);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  color: var(--accent);
+  font-size: 1.1rem;
 }
 
-
-/* ================= LINKS ================= */
+/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.2rem;
+  gap: 1.5rem;
 }
 
 .nav-links li {
@@ -58,30 +49,31 @@
 
 .nav-links a,
 .nav-links span {
-  color: #0a2540;
-  font-size: 0.95rem;
+  color: white;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.3rem 0;
+  transition: color 0.3s ease;
 }
 
-/* Subtle hover (no loud effects) */
 .nav-links a:hover,
 .nav-links span:hover {
   color: var(--accent);
 }
 
-/* ================= DROPDOWN ================= */
+/* DROPDOWN */
 .dropdown-menu {
   position: absolute;
-  top: 130%;
+  top: 2.8rem;
   left: 0;
-  background: #ffffff;
+  background: white;
   min-width: 230px;
-  border: 1px solid #eee;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   border-radius: 4px;
   display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu li {
@@ -90,19 +82,29 @@
 
 .dropdown-menu li a {
   color: #0a2540;
-  display: block;
 }
 
 .dropdown-menu li:hover {
-  background: #f8f9fb;
+  background: #f1f3f6;
 }
 
-/* SHOW DROPDOWN ON HOVER (DESKTOP) */
-.dropdown:hover .dropdown-menu {
-  display: block;
+/* NAV ICONS */
+.nav-icons {
+  display: flex;
+  gap: 1rem;
 }
 
-/* ================= HAMBURGER ================= */
+.nav-icons a {
+  color: white;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: var(--accent);
+}
+
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -110,13 +112,13 @@
 }
 
 .hamburger span {
-  width: 24px;
-  height: 2px;
-  background: #0a2540;
+  width: 25px;
+  height: 3px;
+  background: white;
   margin: 4px 0;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 900px) {
   .hamburger {
     display: flex;
@@ -124,65 +126,96 @@
 
   .nav-links {
     position: absolute;
-    top: 72px;
+    top: 70px;
     left: 0;
     width: 100%;
-    background: #ffffff;
+    background: var(--primary);
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 0;
     display: none;
-    border-bottom: 1px solid #e6e6e6;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links li {
-    margin-bottom: 1rem;
-  }
-
-  /* Mobile dropdowns are always visible */
   .dropdown-menu {
     position: static;
-    display: block;
-    border: none;
     box-shadow: none;
-    padding-left: 1rem;
+    background: transparent;
   }
-}
 
-/* LOGO TEXT VARIANTS */
-.logo-full {
-  display: block;
-}
+  .dropdown-menu li a {
+    color: white;
+  }
 
-.logo-short {
-  display: none;
-}
-
-/* ACTIVE LINK (VERY SUBTLE) */
-.active-link {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 0.2rem;
-}
-
-/* LOGO HOVER (QUIET) */
-.logo:hover {
-  opacity: 0.95;
-}
-
-/* MOBILE LOGO BEHAVIOR */
-@media (max-width: 900px) {
-  .logo-full {
+  .nav-icons {
     display: none;
   }
+}
 
-  .logo-short {
-    display: block;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--primary);
+/* ================= RESPONSIVE NAVBAR TITLE ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .logo h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .logo h2 {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h2 {
+    display: none;
+  }
+}
+
+/* ================= RESPONSIVE NAVBAR SCALE ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .logo h2 {
+    font-size: 0.95rem;
+  }
+
+  .nav-links a,
+  .nav-links span {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .logo h2 {
+    font-size: 0.85rem;
+  }
+
+  .nav-links a,
+  .nav-links span {
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    padding-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    gap: 0.5rem;
   }
 }

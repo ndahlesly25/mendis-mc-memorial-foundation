@@ -1,41 +1,230 @@
+/* =====================================================
+   MISSION PAGE WRAPPER
+===================================================== */
+
 .mission {
   padding: 4rem 2rem;
   max-width: 1100px;
   margin: auto;
 }
 
+/* =====================================================
+   FULL-WIDTH MISSION BANNER (EDGE TO EDGE)
+===================================================== */
+
+.mission-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 65vh;
+  min-height: 420px;
+  background-image: linear-gradient(
+      rgba(10, 37, 64, 0.5),
+      rgba(10, 37, 64, 0.5)
+    ),
+    url("/images/mission-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.mission-banner-overlay {
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.mission-banner-overlay h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.mission-banner-overlay p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* =====================================================
+   INTRO HEADER
+===================================================== */
+
 .mission-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.mission-header h1 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
 .mission-header p {
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
   line-height: 1.8;
   color: #444;
 }
 
-.mission-content {
+/* =====================================================
+   TEXT BLOCKS
+===================================================== */
+
+.mission-block {
+  max-width: 900px;
+  margin: 3rem auto;
   line-height: 1.9;
-  color: #333;
+  color: #444;
 }
 
-.mission-content h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+.mission-block h2 {
   color: var(--primary);
+  margin-bottom: 1rem;
 }
 
-.mission-content ul {
+.mission-block ul {
   padding-left: 1.2rem;
 }
 
-.mission-content li {
+.mission-block li {
   margin-bottom: 0.75rem;
+}
+
+/* =====================================================
+   SPLIT IMAGE + TEXT SECTIONS
+===================================================== */
+
+.mission-split {
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mission-split.left {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.mission-split.right {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.mission-text p {
+  line-height: 1.9;
+  color: #444;
+}
+
+/* =====================================================
+   IMAGE FRAME (SHARED STYLE)
+===================================================== */
+
+.image-frame {
+  position: relative;
+  padding: 12px;
+  border: 1px solid #dfc279;
+  background: #f1f1e4;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  animation: gentleFloat 18s ease-in-out infinite;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-caption {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+/* =====================================================
+   CENTER IMAGE
+===================================================== */
+
+.mission-center-image {
+  max-width: 500px;
+  margin: 5rem auto;
+}
+
+/* =====================================================
+   LIVE IMAGE EFFECTS
+===================================================== */
+
+.image-frame:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.mission-split.left .image-frame {
+  animation-duration: 20s;
+}
+
+.mission-split.right .image-frame {
+  animation-duration: 22s;
+}
+
+.mission-center-image .image-frame {
+  animation-duration: 24s;
+}
+
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .mission-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mission-center-image {
+    margin: 3rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-banner {
+    height: 48vh;
+    min-height: 320px;
+  }
+
+  .mission-banner-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .mission-banner-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .image-frame {
+    animation: none;
+    transition: none;
+  }
+
+  .image-frame:hover {
+    transform: none;
+  }
 }

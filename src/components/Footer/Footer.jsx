@@ -1,28 +1,43 @@
+import { FaFacebookF, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import "./Footer.css";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <h3>Mendi Stephen and Margaret Chuo Memorial Foundation</h3>
+      <div className="footer-container">
+        {/* LOGO + NAME */}
+        <div className="footer-brand">
+          <div className="footer-logo">
+            <img src="/images/logo1.png" alt="MS & MC Foundation Logo" />
+          </div>
+          <h3>MS & MC Memorial Foundation</h3>
+          <p>
+            Honoring legacy through education, community development, and
+            meaningful impact.
+          </p>
+        </div>
 
-        <p className="footer-legacy">
-          Honoring a legacy of service, compassion, and commitment by supporting
-          education, community development, and meaningful impact.
-        </p>
+        {/* CONTACT */}
+        <div className="footer-contact">
+          <h4>Contact</h4>
 
-        <nav className="footer-links">
-          <Link to="/">Home</Link>
-          <Link to="/about/history">About Us</Link>
-          <Link to="/categories">Categories of Giving</Link>
-          <Link to="/grants">Grant Directory</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <FaFacebookF /> Facebook
+          </a>
 
-        <p className="footer-copy">
-          © {new Date().getFullYear()} Mendi Stephen and Margaret Chuo Memorial Foundation
-        </p>
+          <a href="mailto:info@msmcfoundation.org">
+            <FaEnvelope /> info@msmcfoundation.org
+          </a>
+
+          <a href="tel:+237000000000">
+            <FaPhoneAlt /> +237 XXX XXX XXX
+          </a>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="footer-bottom">
+        © {new Date().getFullYear()} Mendi Stephen & Margaret Chuo Memorial Foundation
       </div>
     </footer>
   );

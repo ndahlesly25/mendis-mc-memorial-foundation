@@ -11,32 +11,79 @@ export default function GrantDirectory() {
     },
     {
       name: "Community Health Initiative",
-      category: "Health & Wellbeing",
+      category: "Health",
       year: "2023",
       status: "Closed",
     },
     {
       name: "Youth Development Grant",
-      category: "Community Development",
+      category: "Community",
       year: "2024",
       status: "Open",
     },
   ];
 
+  /* SUMMARY DATA */
+  const totalGrants = grants.length;
+  const openGrants = grants.filter((g) => g.status === "Open").length;
+  const closedGrants = grants.filter((g) => g.status === "Closed").length;
+
+  const categorySummary = {
+    Education: 2,
+    Community: 1,
+    Health: 1,
+  };
+
   return (
     <section className="page">
       <SEO
         title="Grant Directory | MS & MC Memorial Foundation"
-        description="Browse current and past grant opportunities supported by the Mendi Stephen and Margaret Chuo Memorial Foundation."
+        description="Explore current and past grant opportunities supported by the Mendi Stephen and Margaret Chuo Memorial Foundation."
       />
 
       <section className="grant-directory">
+        {/* HEADER */}
         <div className="grant-directory-header">
           <h1>Grant Directory</h1>
           <p>
             A record of grant opportunities and supported initiatives under the
-            Mendi Stephen and Margaret Chuo Memorial Foundation.
+            foundation.
           </p>
+        </div>
+
+        {/* SUMMARY */}
+        <div className="grant-summary">
+          <div className="summary-card">
+            <h3>Total Grants</h3>
+            <span>{totalGrants}</span>
+          </div>
+
+          <div className="summary-card">
+            <h3>Open Grants</h3>
+            <span>{openGrants}</span>
+          </div>
+
+          <div className="summary-card">
+            <h3>Closed Grants</h3>
+            <span>{closedGrants}</span>
+          </div>
+        </div>
+
+        {/* CATEGORY SNAPSHOT */}
+        <div className="grant-category-summary">
+          <h2>Grant Focus Overview</h2>
+
+          {Object.entries(categorySummary).map(([category, count], index) => (
+            <div key={index} className="category-bar">
+              <span>{category}</span>
+              <div className="bar">
+                <div
+                  className="bar-fill"
+                  style={{ width: `${count * 30}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* DESKTOP TABLE */}
