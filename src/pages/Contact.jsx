@@ -1,5 +1,5 @@
 import "./Contact.css";
-import SEO from "../../components/SEO";
+import SEO from "../components/SEO";
 
 export default function Contact() {
   return (
